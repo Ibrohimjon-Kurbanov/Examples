@@ -1,0 +1,191 @@
+/* GLOBAL */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.2s linear;
+}
+html {
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h2 {
+  text-align: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+}
+.wrapper__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.text-overflow__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.text-overflow__text-first {
+  width: 400px;
+  background-color: rgb(133, 54, 54);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  color: #fff;
+}
+.text-overflow__text-second {
+  width: 400px;
+  background-color: rgb(255, 170, 0);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+.text-overflow__text-third {
+  width: 400px;
+  background-color: rgb(43, 0, 255);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+.video__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.audio__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.title-2 {
+  margin-bottom: 3rem;
+}
+.mask__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.mask__box-firts {
+  -webkit-mask-image: url("../images/../images/w3school.png");
+  mask-image: url("../images/w3school.png");
+  mask-repeat: no-repeat;
+}
+.mask__box-second {
+  width: 500px;
+  height: 400px;
+  overflow-y: scroll;
+  background: url("https://www.w3schools.com/css/img_5terre.jpg") no-repeat;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient (black, transparent);
+}
+.mask__box-second p {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+.chekcbox__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  color: red;
+}
+.chekcbox__wrapper {
+  gap: 2rem;
+}
+#check-1 {
+  appearance: none;
+}
+#check-1::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00d";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border: 2px solid red;
+  margin-right: 5px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: red;
+  transition: 0.4s ease;
+}
+#check-1:checked::before {
+  content: "\f00c";
+  border: 2.5px solid rgb(28, 239, 17);
+  color: rgb(28, 239, 17);
+}
+#check-1:checked ~ p {
+  color: rgb(28, 239, 17);
+}
+#check-2 {
+  appearance: none;
+  width: 78px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+#check-2:checked {
+  background-color: #222;
+}
+
+#check-2::before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.5s;
+}
+#check-2:checked::before {
+  left: 40px;
+}
